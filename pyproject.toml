@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endstone-mobstacker"
+version = "0.1.2"
+description = "Mob stacking plugin for Endstone"
+requires-python = ">=3.10"
+dependencies = [
+  "endstone>=0.10",
+  # TOML read/write across Python 3.9–3.12
+  "tomli>=2.0.1; python_version<'3.11'",
+  "tomli-w>=1.0.0",
+]
+
+[project.entry-points."endstone"]
+mobstacker = "endstone_mobstacker:MobStacker"

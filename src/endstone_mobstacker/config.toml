@@ -1,0 +1,30 @@
+[stacking]
+quiet_console = true               # suppress plugin logs
+silence_command_feedback = true    # suppress "Object successfully summoned" spam
+debug_feed_pop = false             # turn on only when debugging
+
+enabled = true
+radius = 3.0
+min_group = 4
+max_stack_size = 100
+scan_period_ticks = 60
+label_format = "×{count}"
+ignore_tamed = true
+
+feed_pop_enabled = true
+feed_pop_require_item = false      # let it pop even if we can't read the item id
+feed_pop_cooldown_ticks = 6
+
+allowed_types = [
+  "minecraft:chicken",
+  "minecraft:cow",
+  "minecraft:pig",
+  "minecraft:sheep",
+  "minecraft:silverfish",
+  "minecraft:zombie",
+  "minecraft:skeleton",
+  "minecraft:creeper",
+  "minecraft:guardian",
+  "minecraft:zombie_pigman",  # alias → zombified_piglin
+  "minecraft:piglin"
+]
